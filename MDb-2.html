@@ -1,0 +1,187 @@
+<!--UpdateOne and UpdateMany-->
+
+
+show collections
+Users
+db.Users.find().size()
+999
+db.Users.find({"uid":101})
+{
+  _id: ObjectId('6719c46d8c4e67b0fa903428'),
+  uid: 101,
+  unamae: 'Kingsley',
+  gender: 'Male',
+  location: 'Conroe',
+  uname: 'Rahul'
+}
+db.Users.updateOne({"uid":101},{$set:{"uname":"Ram"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.Users.find({"uid":101})
+{
+  _id: ObjectId('6719c46d8c4e67b0fa903428'),
+  uid: 101,
+  unamae: 'Kingsley',
+  gender: 'Male',
+  location: 'Conroe',
+  uname: 'Ram'
+}
+
+db.Users.updateMany({"gender":"Male"},{$set:{"location":"Bangalore"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 437,
+  modifiedCount: 437,
+  upsertedCount: 0
+}
+
+                   
+db.Users.find({"gender":"Male"})
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033c4'),
+  uid: 1,
+  unamae: 'Hewet',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033c5'),
+  uid: 2,
+  unamae: 'Yvor',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033c6'),
+  uid: 3,
+  unamae: 'Nicol',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033c7'),
+  uid: 4,
+  unamae: 'Mohandas',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033c9'),
+  uid: 6,
+  unamae: 'Jodie',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033cb'),
+  uid: 8,
+  unamae: 'Hort',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033ce'),
+  uid: 11,
+  unamae: 'Antons',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033cf'),
+  uid: 12,
+  unamae: 'Phineas',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033d9'),
+  uid: 22,
+  unamae: 'Robb',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033dc'),
+  uid: 25,
+  unamae: 'Shaw',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033dd'),
+  uid: 26,
+  unamae: 'Pepito',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033de'),
+  uid: 27,
+  unamae: 'Alden',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033e1'),
+  uid: 30,
+  unamae: 'Titus',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033e2'),
+  uid: 31,
+  unamae: 'Verge',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033e3'),
+  uid: 32,
+  unamae: 'Fitzgerald',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033e4'),
+  uid: 33,
+  unamae: 'Bailey',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033e7'),
+  uid: 36,
+  unamae: 'Farlee',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033ec'),
+  uid: 41,
+  unamae: 'Robby',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033ed'),
+  uid: 42,
+  unamae: 'Wendel',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+{
+  _id: ObjectId('6719c46d8c4e67b0fa9033ee'),
+  uid: 43,
+  unamae: 'Torin',
+  gender: 'Male',
+  location: 'Bangalore'
+}
+
+
